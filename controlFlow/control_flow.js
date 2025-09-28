@@ -50,3 +50,23 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+let personType = "Employee";
+let authorization;
+
+switch(personType) {
+    case "Employee":
+        authorization = "You have access to Dietary Services.";
+        break;
+    case "Enrolled Member":
+        authorization = "You have access to Dietary Services and one-one-one interaction with a dietician.";
+        break;
+    case "Subscriber":
+        authorization = "You have partial access to facilitate Dietary Services only."
+        break;
+    case "Non-Subscriber":
+        authorization = "You need to enroll or subscribe first to avail this facility."
+        break;
+    }
+
+console.log("Authorization: ", authorization);
